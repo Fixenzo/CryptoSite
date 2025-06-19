@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CryptoSite - Platform Cryptocurrency Modern</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <i class="fas fa-coins"></i>
+        <span>CryptoSite</span>
+      </div>
+
+<ul class="nav-links" id="nav-links">
+  <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+  <li><a href="convert.html"><i class="fas fa-exchange-alt"></i> Convert</a></li>
+  <li><a href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
+  <li><a href="ai.html"><i class="fas fa-robot"></i> AI</a></li>
+  <li><a href="wallet.html"><i class="fas fa-wallet"></i> Wallet</a></li>
+</ul>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="btn-icon"><i class="fas fa-moon"></i></button>
+        <button id="mobile-menu" class="btn-icon"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+
+    <div class="ticker-container">
+      <div class="ticker-content">
+        <span>BTC: <span id="btc-price">Loading...</span> | </span>
+        <span>ETH: <span id="eth-price">Loading...</span> | </span>
+        <span>BNB: $567.89 (+1.2%) | </span>
+        <span>SOL: $139.75 (+3.4%) | </span>
+        <span>XRP: $0.5123 (-0.7%) | </span>
+        <span>ADA: $0.4321 (+0.9%)</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Platform Cryptocurrency Modern</h1>
+      <p>Beli, jual, dan kelola aset digital dengan aman dan mudah</p>
+      <div class="hero-buttons">
+        <a href="wallet.html" class="btn-primary">Cek Wallet</a>
+        <a href="convert.html" class="btn-secondary">Trade Sekarang</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='8' x2='12' y2='16'%3E%3C/line%3E%3Cline x1='8' y1='12' x2='16' y2='12'%3E%3C/line%3E%3C/svg%3E" alt="Cryptocurrency" />
+    </div>
+  </section>
+
+  <!-- Market Data -->
+ <section class="market-data">
+  <h2 class="section-title">Market Data Real-time</h2>
+  <div class="crypto-grid">
+
+    <a href="detail.html?token=bitcoin" class="crypto-card">
+      <div class="crypto-header">
+        <i class="fab fa-bitcoin"></i>
+        <h3>Bitcoin (BTC)</h3>
+      </div>
+      <div class="crypto-price">
+        <span id="btc-price-card">Loading...</span>
+        <span class="price-change positive">+2.3%</span>
+      </div>
+      <canvas id="btc-chart"></canvas>
+    </a>
+
+    <a href="detail.html?token=pepe" class="crypto-card">
+      <div class="crypto-header">
+        <img src="pepe.png" alt="PEPE" style="height: 50px; margin-right: 10px;">
+        <h3>Pepe (PEPE)</h3>
+      </div>
+      <div class="crypto-price">
+        <span id="pepe-price-card">Loading...</span>
+        <span class="price-change positive">+0.0%</span>
+      </div>
+      <canvas id="pepe-chart"></canvas>
+    </a>
+
+    <a href="detail.html?token=ethereum" class="crypto-card">
+      <div class="crypto-header">
+        <i class="fab fa-ethereum"></i>
+        <h3>Ethereum (ETH)</h3>
+      </div>
+      <div class="crypto-price">
+        <span id="eth-price-card">Loading...</span>
+        <span class="price-change positive">+1.8%</span>
+      </div>
+      <canvas id="eth-chart"></canvas>
+    </a>
+
+    <a href="detail.html?token=solana" class="crypto-card">
+      <div class="crypto-header">
+        <img src="https://i.imgur.com/qYHg50j.png" alt="SOL" style="height: 40px; margin-right: 10px;">
+        <h3>Solana (SOL)</h3>
+      </div>
+      <div class="crypto-price">
+        <span id="sol-price-card">Loading...</span>
+        <span class="price-change positive">+0.0%</span>
+      </div>
+      <canvas id="sol-chart"></canvas>
+    </a>
+
+    <a href="detail.html?token=binancecoin" class="crypto-card">
+      <div class="crypto-header">
+        <img src="https://i.imgur.com/7PQ8fge.png" alt="BNB" style="height: 40px; margin-right: 5px;">
+        <h3>BNB (BNB)</h3>
+      </div>
+      <div class="crypto-price">
+        <span id="bnb-price-card">Loading...</span>
+        <span class="price-change positive">+0.0%</span>
+      </div>
+      <canvas id="bnb-chart"></canvas>
+    </a>
+
+  </div>
+</section>
+
+  <!-- Trading Chart -->
+  <section class="trading-chart">
+    <h2 class="section-title">BTC/USDT Chart</h2>
+    <div class="chart-container">
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+        {
+          "autosize": true,
+          "symbol": "BINANCE:BTCUSDT",
+          "interval": "D",
+          "timezone": "Etc/UTC",
+          "theme": "dark",
+          "style": "1",
+          "locale": "en",
+          "enable_publishing": false,
+          "hide_top_toolbar": true,
+          "hide_legend": true,
+          "save_image": false,
+          "container_id": "tradingview-chart"
+        }
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <h2 class="section-title">Layanan Kami</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-exchange-alt"></i></div>
+        <h3>Trading</h3>
+        <p>Beli dan jual cryptocurrency dengan harga terbaik dan biaya rendah</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-wallet"></i></div>
+        <h3>Wallet</h3>
+        <p>Kelola aset digital Anda dengan aman dengan wallet terenkripsi</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Analisis</h3>
+        <p>Akses alat analisis teknis dan fundamental terbaik</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Keamanan</h3>
+        <p>Proteksi tingkat tinggi dengan teknologi enkripsi mutakhir</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo"><i class="fas fa-coins"></i><span>CryptoSite</span></div>
+        <p>Platform cryptocurrency modern untuk semua kebutuhan trading Anda</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-telegram"></i></a>
+          <a href="#"><i class="fab fa-discord"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Produk</h4>
+        <ul>
+          <li><a href="index.html">Spot Trading</a></li>
+          <li><a href="convert.html">Convert</a></li>
+          <li><a href="wallet.html">Wallet</a></li>
+          <li><a href="news.html">Market News</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Dukungan</h4>
+        <ul>
+          <li><a href="#">Pusat Bantuan</a></li>
+          <li><a href="https://www.instagram.com/jadibeginikudamakannyaitudaun?igsh=emlnc2J3dmRyanlu">FAQ</a></li>
+          <li><a href="payment.html">Status Pembayaran</a></li>
+          <li><a href="https://www.instagram.com/jadibeginikudamakannyaitudaun?igsh=emlnc2J3dmRyanlu">Kontak Kami</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4>Berlangganan</h4>
+        <p>Dapatkan update terbaru tentang cryptocurrency</p>
+        <form>
+          <input type="email" placeholder="Email Anda" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 CryptoSite. Dibuat oleh Fixenzo</p>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+        </html>
