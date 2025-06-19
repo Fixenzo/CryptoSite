@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Mata Uang - CryptoSite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-coins"></i>
+                <span>CryptoSite</span>
+            </div>
+            
+<ul class="nav-links" id="nav-links">
+  <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+  <li><a href="convert.html"><i class="fas fa-exchange-alt"></i> Convert</a></li>
+  <li><a href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
+  <li><a href="ai.html"><i class="fas fa-robot"></i> AI</a></li>
+  <li><a href="wallet.html"><i class="fas fa-wallet"></i> Wallet</a></li>
+</ul>
+            
+            <div class="header-actions">
+                <button id="theme-toggle" class="btn-icon">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="mobile-menu" class="btn-icon">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="ticker-container">
+            <div class="ticker-content">
+                <span>BTC: <span id="btc-price">Loading...</span> | </span>
+                <span>ETH: <span id="eth-price">Loading...</span> | </span>
+                <span>BNB: $567.89 (+1.2%) | </span>
+                <span>SOL: $139.75 (+3.4%) | </span>
+                <span>XRP: $0.5123 (-0.7%) | </span>
+                <span>ADA: $0.4321 (+0.9%)</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Convert Section -->
+    <section class="convert-section">
+        <h2 class="section-title">Konversi Mata Uang</h2>
+        <div class="convert-container">
+            <div class="convert-card">
+                <div class="convert-inputs">
+                    <div class="input-group">
+                        <label for="amount">Jumlah</label>
+                        <input type="number" id="amount" placeholder="Masukkan jumlah" min="0" step="0.01">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="from">Dari</label>
+                        <select id="from">
+                            <option value="BTC">Bitcoin (BTC)</option>
+                            <option value="ETH">Ethereum (ETH)</option>
+                            <option value="USD">Dolar AS (USD)</option>
+                            <option value="IDR">Rupiah Indonesia (IDR)</option>
+                            <option value="EUR">Euro (EUR)</option>
+                            <option value="GBP">Poundsterling (GBP)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="convert-swap">
+                        <button id="swap-currencies" class="btn-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="to">Ke</label>
+                        <select id="to">
+                            <option value="IDR">Rupiah Indonesia (IDR)</option>
+                            <option value="USD">Dolar AS (USD)</option>
+                            <option value="BTC">Bitcoin (BTC)</option>
+                            <option value="ETH">Ethereum (ETH)</option>
+                            <option value="EUR">Euro (EUR)</option>
+                            <option value="GBP">Poundsterling (GBP)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="convert-result">
+                    <h3>Hasil Konversi</h3>
+                    <div id="result" class="result-box">
+                        <div class="loading-animation">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="convert-actions">
+                    <button id="convert-btn" class="btn-primary">Konversi Sekarang</button>
+                    <button id="reset-btn" class="btn-secondary">Reset</button>
+                </div>
+            </div>
+            
+            <div class="convert-info">
+                <h3><i class="fas fa-info-circle"></i> Informasi Konversi</h3>
+                <p>Konversi dilakukan menggunakan kurs real-time dari API CryptoSite. Nilai tukar diperbarui setiap menit.</p>
+                
+                <div class="exchange-rates">
+                    <h4>Kurs Saat Ini:</h4>
+                    <ul>
+                        <li>1 BTC = <span id="btc-idr">Loading...</span> IDR</li>
+                        <li>1 ETH = <span id="eth-idr">Loading...</span> IDR</li>
+                        <li>1 USD = <span id="usd-idr">15,000</span> IDR</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fas fa-coins"></i>
+                    <span>CryptoSite</span>
+                </div>
+                <p>Platform cryptocurrency modern untuk semua kebutuhan trading Anda</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Produk</h4>
+                <ul>
+                    <li><a href="index.html">Spot Trading</a></li>
+                    <li><a href="convert.html">Convert</a></li>
+                    <li><a href="wallet.html">Wallet</a></li>
+                    <li><a href="news.html">Market News</a></li>
+                </ul>
+            </div>
+            
+      <div class="footer-links">
+        <h4>Produk</h4>
+        <ul>
+          <li><a href="index.html">Spot Trading</a></li>
+          <li><a href="convert.html">Convert</a></li>
+          <li><a href="wallet.html">Wallet</a></li>
+          <li><a href="news.html">Market News</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Dukungan</h4>
+        <ul>
+          <li><a href="#">Pusat Bantuan</a></li>
+          <li><a href="https://www.instagram.com/jadibeginikudamakannyaitudaun?igsh=emlnc2J3dmRyanlu">FAQ</a></li>
+          <li><a href="payment.html">Status Pembayaran</a></li>
+          <li><a href="https://www.instagram.com/jadibeginikudamakannyaitudaun?igsh=emlnc2J3dmRyanlu">Kontak Kami</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4>Berlangganan</h4>
+        <p>Dapatkan update terbaru tentang cryptocurrency</p>
+        <form>
+          <input type="email" placeholder="Email Anda" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 CryptoSite. Dibuat oleh Fixenzo</p>
+    </div>
+  </footer>
+
+    <script src="script.js"></script>
+<script>
+const fromSelect = document.getElementById("from");
+const toSelect = document.getElementById("to");
+const amountInput = document.getElementById("amount");
+const convertBtn = document.getElementById("convert-btn");
+const resetBtn = document.getElementById("reset-btn");
+const resultBox = document.getElementById("result");
+
+const btcPrice = document.getElementById("btc-price");
+const ethPrice = document.getElementById("eth-price");
+const btcIdr = document.getElementById("btc-idr");
+const ethIdr = document.getElementById("eth-idr");
+
+// Pemetaan simbol ke ID CoinGecko
+const coinMap = {
+  BTC: "bitcoin",
+  ETH: "ethereum",
+  USD: "usd",
+  IDR: "idr",
+  EUR: "eur",
+  GBP: "gbp"
+};
+
+// Fungsi memuat harga ticker (atas)
+async function loadTicker() {
+  try {
+    const res = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd,idr");
+    const data = await res.json();
+
+    btcPrice.textContent = `$${data.bitcoin.usd}`;
+    ethPrice.textContent = `$${data.ethereum.usd}`;
+    btcIdr.textContent = data.bitcoin.idr.toLocaleString("id-ID");
+    ethIdr.textContent = data.ethereum.idr.toLocaleString("id-ID");
+  } catch (e) {
+    btcPrice.textContent = "Error";
+    ethPrice.textContent = "Error";
+    btcIdr.textContent = "-";
+    ethIdr.textContent = "-";
+  }
+}
+
+// Fungsi konversi
+async function convertCurrency() {
+  const amount = parseFloat(amountInput.value);
+  const fromSymbol = fromSelect.value;
+  const toSymbol = toSelect.value;
+
+  const from = coinMap[fromSymbol];
+  const to = coinMap[toSymbol];
+
+  if (!from || !to) {
+    resultBox.innerHTML = "<p>Mata uang tidak dikenali.</p>";
+    return;
+  }
+
+  if (isNaN(amount) || amount <= 0) {
+    resultBox.innerHTML = "<p>Masukkan jumlah yang valid.</p>";
+    return;
+  }
+
+  try {
+    resultBox.innerHTML = "<p>Sedang mengonversi...</p>";
+
+    const url = `https://api.coingecko.com/api/v3/simple/price?ids=${from}&vs_currencies=${to}`;
+    const res = await fetch(url);
+    const data = await res.json();
+
+    if (!data[from] || !data[from][to]) {
+      resultBox.innerHTML = "<p>Konversi tidak tersedia.</p>";
+      return;
+    }
+
+    const converted = amount * data[from][to];
+    resultBox.innerHTML = `<h4>${amount} ${fromSymbol} = ${converted.toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 6,
+    })} ${toSymbol}</h4>`;
+  } catch (error) {
+    resultBox.innerHTML = "<p>Gagal mengambil data.</p>";
+  }
+}
+
+// Event listeners
+convertBtn.addEventListener("click", convertCurrency);
+resetBtn.addEventListener("click", () => {
+  amountInput.value = "";
+  resultBox.innerHTML = "<p>Silakan isi form dan klik konversi.</p>";
+});
+
+loadTicker();
+</script>
+</body>
+  </html>
